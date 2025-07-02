@@ -1,0 +1,57 @@
+{
+  "name": "ftl-js-validator",
+  "displayName": "ftl-js-validator",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:ftl"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "ftl",
+        "extensions": [".ftl"],
+        "aliases": ["FreeMarker Template"]
+      }
+    ],
+    "commands": [
+      {
+        "command": "ftl-js-validator.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "ftl-js-validator.checkSyntax",
+        "title": "检查 JavaScript 语法错误"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.101.0",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "acorn": "^8.15.0"
+  }
+}
