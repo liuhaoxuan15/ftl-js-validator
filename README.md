@@ -1,71 +1,52 @@
-# ftl-js-validator README
+# FTL JavaScript 语法验证器
 
-This is the README for your extension "ftl-js-validator". After writing up a brief description, we recommend including the following sections.
+一个用于检查 FreeMarker 模板文件(.ftl)中 JavaScript 代码块语法错误的 VS Code 扩展。
 
-## Features
+## 功能特性
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- 检测 `.ftl` 文件中 `<script>` 标签内的 JavaScript 语法错误
+- 支持实时错误提示和位置标记
+- 可通过右键菜单快速验证整个文件
+- 详细的错误信息输出，支持点击跳转到错误位置
 
-For example if there is an image subfolder under your extension project workspace:
+## 使用方法
 
-\!\[feature X\]\(images/feature-x.png\)
+1. 打开任意 `.ftl` 文件
+2. 右键点击编辑器，选择 "检查 JavaScript 语法错误"
+3. 在输出面板中查看检查结果
+4. 点击错误信息可直接跳转到对应位置
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## 错误显示
 
-## Requirements
+- 编辑器中使用波浪线标记错误位置
+- 输出面板显示详细错误信息
+- 支持多个错误同时显示
+- 错误信息包含具体的行号和列号
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## 支持的语法
 
-## Extension Settings
+- 支持 ECMAScript 最新语法
+- 支持模块语法 (import/export)
+- 检查包括但不限于：
+  - 语法错误
+  - 括号匹配
+  - 分号缺失
+  - 无效声明
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## 系统要求
 
-For example:
+- VS Code 版本: 1.101.0 或更高
 
-This extension contributes the following settings:
+## 已知问题
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+- 暂不支持内联 JavaScript 代码检查
+- 不支持 TypeScript 语法检查
 
-## Known Issues
+## 更新日志
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+### 0.0.1
 
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+- 初始版本发布
+- 基本的语法检查功能
+- 支持输出面板显示错误信息
+- 支持错误位置跳转

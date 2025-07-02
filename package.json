@@ -1,7 +1,7 @@
 {
   "name": "ftl-js-validator",
   "displayName": "ftl-js-validator",
-  "description": "",
+  "description": "FTL文件中JavaScript代码的语法检查器",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.101.0"
